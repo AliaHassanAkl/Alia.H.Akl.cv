@@ -1,0 +1,641 @@
+:root{
+    --colorBg1: #FFF8EB;
+    --colorBg2:#c5c7bf;
+    --colormain1:rgb(0, 128, 0);
+    --colormain2: #f08475;
+    --colormain3:rgb(230, 175, 109);
+}
+*{
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+}
+.clearFix{
+    clear: both;
+}
+/* scrolling tool */
+#scrolling-nav{
+    position: fixed;
+    width: 30px;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    z-index: 1003;
+}
+#scrolling-nav ul{
+
+    list-style-type: none;
+    padding: 0;
+}
+#scrolling-nav li {
+    margin-top: 10px;
+    border-radius: 50%;
+    border: solid 3px var(--colormain3);
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+#scrolling-nav li:hover{
+    background-color: var(--colormain3);
+    transition: 0.5s ;
+    .element-name{
+        display: block;
+        transition: all 0.5s;
+    }
+    
+}
+#scrolling-nav li .element-name{
+    background-color: var(--colormain3);
+    color: var(--colormain1);
+    position: absolute;
+    right: 35px;
+    width: max-content;
+    padding-left: 3px;
+    border-radius: 3px;
+    display: none;
+}
+
+
+/* intro section  */
+#intro .title{
+    position: relative;
+    left: 0px;
+    top:0px;
+    right: 5px;
+    background-color: #FFF8EB;
+    z-index: 1000;
+    float: right;
+}
+#intro .title .title-cloud img{
+   width: 35%;
+   float: right;
+}
+#intro .title .title-detailes{
+    position: absolute;
+    top: 55px;
+    right: 18px;
+    color: #FFF8EB;
+}
+.intro-content {
+    position: relative;
+    background-color: var(--colorBg1);
+    height: 100vh;
+}
+.intro-content h4{
+    position: absolute;
+    left:90px;
+    top: 150px;
+    background-color: rgb(0, 128, 0);
+    padding: 25px 100px 25px 70px;
+    z-index: 2;
+
+}
+.intro-content span{
+    color: var(--colormain3);
+}
+.intro-content h4:before{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 78.5px;
+    border: solid cadetblue 20px;
+    border-left: solid 20px transparent ;
+    border-bottom: solid 20px transparent;
+}
+.intro-content h4:after{
+    content: "";
+    height:100% ;
+    position: absolute;
+    left: 100%;
+    top: 0;
+    border: solid 40px transparent ;
+    border-left: solid 40px green;
+    /* border-bottom: solid 20px transparent; */
+}
+.intro-content h1{
+    position: absolute;
+    left:200px;
+    top: 250px;
+    background-color: rgb(230, 175, 109);
+    padding: 50px 75px;
+}
+.intro-content h1:before{
+    content: ""; 
+    position: absolute;
+    height: 100%;
+    width: 150px;
+    left: -75px;
+    top: 0;
+    background-color:rgb(230, 175, 109);
+    border-radius: 50%;
+
+}
+.intro-content h1:after{
+    content: ""; 
+    position: absolute;
+    height: 100%;
+    width: 150px;
+    right: -75px;
+    top: 0;
+    background-color:rgb(230, 175, 109);;
+    border-radius: 50%;
+
+}
+.intro-img img{
+    height: 100%;
+}
+.intro-img{
+    height: 600px;
+    position: absolute; 
+    right: 80px;
+    top: 20px;
+    z-index: 1001;
+}
+
+
+/* about section */
+#about{
+    background-color: var(--colorBg2);
+    position: relative;
+    height: 130vh;
+
+}
+#about .about-img img{
+    height: 140%;
+    width: 100%;
+}
+#about .about-img{
+    float: left;
+    width: 30%;
+    height: 500px;
+}
+.about-content{
+    padding-top: 5%; 
+}
+#about .about-content .hello{
+    position: relative;
+}
+#about .about-content .hello:before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 30%;
+    height: 100%;
+    width: 70%;
+    border: solid transparent 350px;
+    border-top: solid green 120px;
+}
+#about .about-content h3{
+    z-index: 1001;
+    position: absolute;
+    text-align: right;
+    margin-right: 100px;
+    color:#FFF8EB;
+    right: 23%;
+    top: 32px;
+
+}
+#about .about-content  .about-discription{
+    float: right;
+    width: 70%;
+    padding: 150px 30px;
+    
+    
+}
+#about .about-content  .about-discription p{
+    line-height: 30px;
+    text-align: ;
+}
+#about .about-content .about-discription button{
+    background-color: var(--colormain1);
+    width: 100px;
+    height: 100px;
+  
+}
+#about .about-content .about-discription button a{
+    color: var(--colorBg1);
+    text-decoration: none;
+}
+#about .about-content .about-discription .goTo .btn{
+    text-align: center;
+    margin: 10px;
+    height: 100px;
+    width: 100px;
+    background-color: green;
+    border-radius: 50%;
+    border: var(--colorBg1) solid 1px;
+    color: #C5C7BF;
+}  
+
+
+/* projects sec */
+#projects{
+        background-color:var(--colorBg1);
+        padding-bottom: 10%;
+        background-image: url(../imgs/project\ traingle.svg);
+        background-repeat: no-repeat;
+        background-size: contain;
+}
+#projects .container-fluid .row{
+}
+#projects .project-title{
+    position: relative;
+}
+/* #projects .project-title:before{
+    content:"";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top:0 ;
+    left: 0;
+    border: solid  transparent 320px;
+    border-left:solid #008000 350px;
+} */
+#projects .project-title h3{
+    z-index: 1000;
+    margin: auto;
+    color: #F08475;
+}
+#projects .card {
+    background-color:green;
+    border: solid 3px rgb(230, 175, 109);
+    padding: 6px;
+    color: #F08475;
+}
+#projects .card-body .btn {
+    background-color:rgb(230, 175, 109);
+}
+
+/* skills sec */
+
+#skills{
+    height: 130vh;
+    background-color: var(--colorBg2);
+    position: relative;
+}
+#skills .Title{
+    height: 250px;
+    width: 300px;
+    background-image: url(../imgs/blob-haikei.svg);
+    background-size:150% 150%;
+    background-position: center;
+    background-repeat: no-repeat;   
+}
+#skills .titleImg{
+    position: absolute;
+    width: 40%;
+    top: 20%;
+    right: 30%;
+}
+#skills .titleImg img{
+    width: 100%;
+}
+#skills h3{
+    color:#FFF8EB;
+} 
+#skills .my-skills{
+    position: absolute;
+    top: 0;
+    width:100%;
+}
+#skills .skill{
+    position: absolute;
+}
+#skills .html{
+    width: 80px;
+    top: 100px;
+    left: 200px;
+}
+#skills .html img{
+    width: 100%;
+}
+#skills .html:after{
+    content: "";
+    width: 230px;
+    height: 2px;
+    position: absolute;
+    top: 110%;
+    left: 100%;
+    background-color: var(--colormain1);
+    display: block;
+    transform: rotate(30deg);
+
+}
+#skills .css{
+    width: 80px;
+    top: 300px;
+    left: 100px
+}
+#skills .css img{
+    width: 100%;
+}
+#skills .css:after{
+    content: "";
+    width: 200px;
+    height: 2px;
+    position: absolute;
+    top: 50%;
+    left: 120%;
+    background-color: var(--colormain1);
+    display: block;
+    transform: rotate(5deg);
+
+}
+#skills .js{
+    width: 80px;
+    top: 500px;
+    left: 200px
+}
+#skills .js img{
+    width: 100%;
+}
+#skills .js:after{
+    content: "";
+    width: 200px;
+    height: 2px;
+    position: absolute;
+    top: 10%;
+    left: 100%;
+    background-color: var(--colormain1);
+    display: block;
+    transform: rotate(-20deg);
+
+}
+#skills .jQuary{
+    width: 80px;
+    top: 100px;
+    right: 200px
+}
+#skills .jQuary img{
+    width: 100%;
+}
+#skills .jQuary:after{
+    content: "";
+    width: 230px;
+    height: 2px;
+    position: absolute;
+    top: 100%;
+    right: 100%;
+    background-color: var(--colormain1);
+    display: block;
+    transform: rotate(-20deg);
+}
+#skills .respons{
+    width: 80px;
+    height: 50px;
+    top: 300px;
+    right: 100px
+}
+#skills .respons img{
+    width: 100%;
+}
+#skills .respons:after{
+    content: "";
+    width: 200px;
+    height: 2px;
+    position: absolute;
+    top: 50%;
+    right: 120%;
+    background-color: var(--colormain1);
+    display: block;
+    transform: rotate(0deg);
+}
+#skills .bootstrap{
+    width: 80px;
+    top: 500px;
+    right: 200px
+}
+#skills .bootstrap img{
+    width: 100%;
+}
+#skills .bootstrap:after{
+    content: "";
+    width: 200px;
+    height: 2px;
+    position: absolute;
+    top: 10%;
+    right: 120%;
+    background-color: var(--colormain1);
+    display: block;
+    transform: rotate(20deg);
+}
+
+
+/* services sec */
+/* #services{
+    background-color: var(--colorBg2);
+}
+#services .title{
+    position: relative;
+    z-index: 1000;
+}
+#services .title:before{
+    content: "";
+    position: absolute;
+    height: 150px;
+    width: 25%;
+    top: 20px;
+    left: 37%;
+    background-image: url(../imgs/106-1061666_clouds-clipart-pink-cloud-pink-cloud-vector-png.png);
+    background-size: 100% 100%;
+}
+#services .title h3{
+    z-index: 1001;
+    
+}
+#services .services-intro {
+padding-top: 30px;
+
+}
+#services .services-intro p{
+    font-size: 14px;
+}
+#services .my-services .service-img{
+width: 100px;
+
+
+}
+#services .my-services .service-img img{
+    width: 100%;
+    border-radius: 50%;
+}
+
+#services .my-services a{
+    background-color: green;
+    color: #FFF8EB;
+    float: right;
+} */
+
+/* time line */
+#time-line {
+    background-color: var(--colorBg1);
+    padding-bottom: 30px;
+}
+#time-line h4{
+    color: green;
+    text-align: center;
+    padding: 30px 0  ;
+}
+#time-line .time-line-content{
+    position: relative;
+    overflow: hidden;
+}
+#time-line .time-line-content:before {
+    content: "";
+    width: 2px;
+    height: 99%;
+    background-color:green;
+    position: absolute;
+    left: 50%;
+    margin-left: -1px;
+    top: 0;
+}
+#time-line .time-line-content span {
+    background-color: green;
+    color: #fff;
+    border-radius: 10px;
+    padding: 5px;
+    width: 50px;
+    font-weight: bold;
+    position: relative;
+    margin: 20px auto;
+    float: left; 
+    left: 48%;
+    top: 10px;
+    text-align: center;
+    z-index: 2;
+}
+#time-line .time-line-content .left,
+#time-line .time-line-content .right{
+    width: calc(50% - 50px);
+    position: relative;
+    margin: 10px 0;
+
+}
+#time-line .time-line-content .left{
+    float: left;
+    /* left: -50px;  */
+    margin-top: 60px;
+}
+#time-line .time-line-content .right{
+    float: right;
+   
+}
+#time-line .time-line-content .left:before {
+    right: -57px;
+}
+#time-line .time-line-content .right:before {
+    left: -57px;
+}
+#time-line .time-line-content .left:before,
+#time-line .time-line-content .right:before {
+    content: "";
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    border: 3px solid green;
+    position: absolute;
+    top: 20px;
+    background-color:green;
+}
+#time-line .time-line-content .content{
+    background-color:#F08475;
+    padding: 15px;
+    border-radius: 10px;
+}
+#time-line .time-line-content h5{
+    color: green;
+    display: flex;
+    justify-content: center;
+}
+#time-line .time-line-content p{
+    text-align: center;
+    color: #FFF8EB;
+    line-height: 1.5;
+}
+#time-line .time-line-content .left .content:before,
+#time-line .time-line-content .right .content:before {
+    content: "";
+    height: 0;
+    width: 0;
+    position: absolute;
+    border: 10px solid;
+    top: 15px;
+   
+}
+#time-line .time-line-content .left .content:before {
+    border-color: transparent transparent transparent #F08475;
+    right: -20px;
+}
+#time-line .time-line-content .right .content:before {
+    border-color: transparent #F08475 transparent transparent;
+    left: -20px;
+}
+
+/* contacts section*/
+
+#contacts {
+    background-color: var(--colorBg2);
+    padding: 10p;
+    position: relative;
+
+}
+
+#contacts button{
+    background-color: var(--colormain3);
+    color: #FFF8EB;
+    position: absolute;
+    right: 60px;
+    bottom: 10px;
+
+}
+#contacts .phone{
+    width: 60%;
+}
+#contacts .name{
+    width: 60%;
+}
+#contacts .E-mail{
+    width: 70%;
+}
+
+#contacts .me-media a{
+    
+    color: #fff;
+    position: relative;
+}
+#contacts .me-media a:after{
+   content: "_____";
+   width: 20px;
+   height: 1px;
+   color: #ffffff;
+   position: absolute;
+   bottom: 0 ;
+   left: -5px;   
+}
+#contacts .email a:hover,
+#contacts .email a:hover::after{
+    transition: all 1.5s;
+    color: #1b76b3;
+}
+
+#contacts .khamsat a:hover ,
+#contacts .khamsat a:hover::after{
+    transition: all 1.5s;
+    color: #df9c0d;
+}
+#contacts .whatsapp a:hover,
+#contacts .whatsapp a:hover::after {
+    transition: all 1.5s;
+    color: #06df3c;
+}
+#contacts .gethub  a:hover,
+#contacts .gethub  a:hover::after {
+    transition: all 1.5s;
+    color: #030303;
+}
+#contacts .linkedin  a:hover,
+#contacts .linkedin  a:hover::after {
+    transition: all 1.5s;
+    color: #1c07d4;
+}
