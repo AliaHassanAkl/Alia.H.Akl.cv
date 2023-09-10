@@ -200,14 +200,21 @@
     width: 70%;
     padding: 150px 30px;
     
+    
 }
 #about .about-content  .about-discription p{
     line-height: 30px;
     text-align: ;
 }
-#about .about-content .about-discription .goTo{
-    display: flex;
-    justify-content: space-evenly;
+#about .about-content .about-discription button{
+    background-color: var(--colormain1);
+    width: 100px;
+    height: 100px;
+  
+}
+#about .about-content .about-discription button a{
+    color: var(--colorBg1);
+    text-decoration: none;
 }
 #about .about-content .about-discription .goTo .btn{
     text-align: center;
