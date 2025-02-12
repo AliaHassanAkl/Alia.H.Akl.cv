@@ -13,6 +13,14 @@
 .clearFix{
     clear: both;
 }
+html {
+    scroll-behavior: smooth;
+}
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+}
+
 /* scrolling tool */
 #scrolling-nav{
     position: fixed;
@@ -57,6 +65,10 @@
 
 
 /* intro section  */
+#intro {
+    background-color: var(--colorBg1) ;
+    height: 90vh;
+}
 #intro .title{
     position: relative;
     left: 0px;
@@ -80,6 +92,7 @@
     position: relative;
     background-color: var(--colorBg1);
     height: 100vh;
+    
 }
 .intro-content h4{
     position: absolute;
@@ -112,35 +125,18 @@
     border-left: solid 40px green;
     /* border-bottom: solid 20px transparent; */
 }
-.intro-content h1{
+.intro-content .wlc {
     position: absolute;
     left:200px;
     top: 250px;
     background-color: rgb(230, 175, 109);
-    padding: 50px 75px;
+    padding: 50px 75px; 
+    font-size: 30px ;
+    font-weight:700;
+    display: inline-block;  
 }
-.intro-content h1:before{
-    content: ""; 
-    position: absolute;
-    height: 100%;
-    width: 150px;
-    left: -75px;
-    top: 0;
-    background-color:rgb(230, 175, 109);
-    border-radius: 50%;
 
-}
-.intro-content h1:after{
-    content: ""; 
-    position: absolute;
-    height: 100%;
-    width: 150px;
-    right: -75px;
-    top: 0;
-    background-color:rgb(230, 175, 109);;
-    border-radius: 50%;
 
-}
 .intro-img img{
     height: 100%;
 }
@@ -157,7 +153,7 @@
 #about{
     background-color: var(--colorBg2);
     position: relative;
-    height: 130vh;
+    height: 90vh;
 
 }
 #about .about-img img{
@@ -172,6 +168,7 @@
 .about-content{
     padding-top: 5%; 
 }
+
 #about .about-content .hello{
     position: relative;
 }
@@ -206,11 +203,17 @@
     line-height: 30px;
     text-align: ;
 }
-#about .about-content .about-discription button{
+#about .about-content .about-discription .togo .project{
     background-color: var(--colormain1);
-    width: 100px;
-    height: 100px;
-  
+
+}
+#about .about-content .about-discription .togo .contact{
+    background-color: var(--colormain3)!important;
+}
+
+#about .about-content .about-discription button:hover a{
+    color: var(--colorBg1);
+    transition: all 0.6s ease-in-out;
 }
 #about .about-content .about-discription button a{
     color: var(--colorBg1);
@@ -226,31 +229,63 @@
     border: var(--colorBg1) solid 1px;
     color: #C5C7BF;
 }  
+#about .about-content .about-discription button:hover{
+    border: solid 3px var(--colormain1) !important;
+    transition: all 0.6s ease-in-out;
+}
 
 
 /* projects sec */
 #projects{
         background-color:var(--colorBg1);
-        padding-bottom: 10%;
-        background-image: url(../imgs/project\ traingle.svg);
-        background-repeat: no-repeat;
-        background-size: contain;
+        width: 100%;
+        height: auto;
 }
-#projects .container-fluid .row{
-}
+
 #projects .project-title{
-    position: relative;
+    background-color: var(--colormain1);
+    padding: 5vh 0;
 }
-/* #projects .project-title:before{
+#projects .greenCircler1 {
+    background-color: var(--colormain1);
+    padding: 2.5vh;
+    animation-delay: 0.7s;
+   
+}
+#projects .greenCircler2 {
+    background-color: var(--colormain1);
+    padding: 2vh;
+    animation-delay: 0.6s;
+}
+
+#projects .greenCircler3 {
+    background-color: var(--colormain1);
+    padding: 1.5vh;
+    animation-delay: 0.5s;
+}
+.greenCircler{
+    display: inline-block;
+    animation: blinkAnimation 1.5s infinite;
+}
+@keyframes blinkAnimation {
+    0%, 100% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+    }
+  }
+
+#projects .project-title:before{
     content:"";
     position: absolute;
     height: 100%;
     width: 100%;
     top:0 ;
     left: 0;
-    border: solid  transparent 320px;
-    border-left:solid #008000 350px;
-} */
+    /* border: solid  transparent 320px;
+    border-left:solid #008000 350px; */
+}
 #projects .project-title h3{
     z-index: 1000;
     margin: auto;
@@ -268,157 +303,86 @@
 
 /* skills sec */
 
-#skills{
-    height: 130vh;
+#skills {
+    height: auto;
     background-color: var(--colorBg2);
+    padding: 50px 0;
+}
+
+.skills {
+    min-height: auto;
+    background-color: var(--colorBg2);
+}
+
+.skillLevel {
+    height: 20px;
+    background-color: var(--colormain2);
+    width: 0; /* Start with zero width for animation */
+    transition: width 1.5s ease-in-out;
+    animation: fillBar 1.5s forwards;
+    animation-play-state: paused;
+}
+
+.skill {
+    margin: 10px 0;
+}
+
+.html {
+    --width: 90%;
+}
+.css {
+    --width: 95%;
+}
+.js {
+    --width: 70%;
+}
+.react {
+    --width: 85%;
+}
+
+.skillName h4 {
+    color: var(--colormain1);
+}
+
+#skills .container {
     position: relative;
 }
-#skills .Title{
+
+#skills .Title {
     height: 250px;
     width: 300px;
     background-image: url(../imgs/blob-haikei.svg);
-    background-size:150% 150%;
+    background-size: 150% 150%;
     background-position: center;
-    background-repeat: no-repeat;   
+    background-repeat: no-repeat;
 }
-#skills .titleImg{
+
+#skills .titleImg {
     position: absolute;
     width: 40%;
     top: 20%;
     right: 30%;
 }
-#skills .titleImg img{
-    width: 100%;
-}
-#skills h3{
-    color:#FFF8EB;
-} 
-#skills .my-skills{
-    position: absolute;
-    top: 0;
-    width:100%;
-}
-#skills .skill{
-    position: absolute;
-}
-#skills .html{
-    width: 80px;
-    top: 100px;
-    left: 200px;
-}
-#skills .html img{
-    width: 100%;
-}
-#skills .html:after{
-    content: "";
-    width: 230px;
-    height: 2px;
-    position: absolute;
-    top: 110%;
-    left: 100%;
-    background-color: var(--colormain1);
-    display: block;
-    transform: rotate(30deg);
 
-}
-#skills .css{
-    width: 80px;
-    top: 300px;
-    left: 100px
-}
-#skills .css img{
+#skills .titleImg img {
     width: 100%;
 }
-#skills .css:after{
-    content: "";
-    width: 200px;
-    height: 2px;
-    position: absolute;
-    top: 50%;
-    left: 120%;
-    background-color: var(--colormain1);
-    display: block;
-    transform: rotate(5deg);
 
+#skills h3 {
+    color: #FFF8EB;
 }
-#skills .js{
-    width: 80px;
-    top: 500px;
-    left: 200px
-}
-#skills .js img{
-    width: 100%;
-}
-#skills .js:after{
-    content: "";
-    width: 200px;
-    height: 2px;
-    position: absolute;
-    top: 10%;
-    left: 100%;
-    background-color: var(--colormain1);
-    display: block;
-    transform: rotate(-20deg);
 
+/* Animation */
+@keyframes fillBar {
+    from {
+        width: 0;
+    }
+    to {
+        width:var(--width);
+    }
 }
-#skills .jQuary{
-    width: 80px;
-    top: 100px;
-    right: 200px
-}
-#skills .jQuary img{
-    width: 100%;
-}
-#skills .jQuary:after{
-    content: "";
-    width: 230px;
-    height: 2px;
-    position: absolute;
-    top: 100%;
-    right: 100%;
-    background-color: var(--colormain1);
-    display: block;
-    transform: rotate(-20deg);
-}
-#skills .respons{
-    width: 80px;
-    height: 50px;
-    top: 300px;
-    right: 100px
-}
-#skills .respons img{
-    width: 100%;
-}
-#skills .respons:after{
-    content: "";
-    width: 200px;
-    height: 2px;
-    position: absolute;
-    top: 50%;
-    right: 120%;
-    background-color: var(--colormain1);
-    display: block;
-    transform: rotate(0deg);
-}
-#skills .bootstrap{
-    width: 80px;
-    top: 500px;
-    right: 200px
-}
-#skills .bootstrap img{
-    width: 100%;
-}
-#skills .bootstrap:after{
-    content: "";
-    width: 200px;
-    height: 2px;
-    position: absolute;
-    top: 10%;
-    right: 120%;
-    background-color: var(--colormain1);
-    display: block;
-    transform: rotate(20deg);
-}
+
+
 
 
 /* services sec */
@@ -584,10 +548,18 @@ width: 100px;
 #contacts button{
     background-color: var(--colormain3);
     color: #FFF8EB;
+    font-size: 20px;
     position: absolute;
-    right: 60px;
-    bottom: 10px;
-
+    right: 80px;
+    bottom: 20px;
+   
+}
+#contacts .sendSMA button:hover{
+    font-size: 25px;
+    padding: 35px 35px;
+    right: 85px;
+    bottom: 25px;
+    transition: all ease-in-out 0.5s;
 }
 #contacts .phone{
     width: 60%;
@@ -638,4 +610,33 @@ width: 100px;
 #contacts .linkedin  a:hover::after {
     transition: all 1.5s;
     color: #1c07d4;
+}
+
+
+
+
+
+/* Mobile First Approach */
+@media (max-width: 768px) {
+    .intro-content {
+        text-align: center;
+        height: auto;
+    }
+    #scrolling-nav {
+        width: 20px;
+    }
+    #projects .card {
+        margin: 10px;
+        padding: 10px;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    /* Tablet-specific styles */
+    .about-content {
+        flex-direction: column;
+    }
+    #skills .skill {
+        position: relative;
+    }
 }
